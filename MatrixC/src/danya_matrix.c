@@ -276,6 +276,9 @@ int danya_determinant(matrix_t *A, double *result) {
 int danya_inverse_matrix(matrix_t *A, matrix_t *result) {
   int status = 0;
 
+    matrix_t matrix_temp = {0};
+    matrix_t matrix_temp2 = {0};
+
   if (A == NULL || result == NULL)
     status = INCORRECT_MATRIX;
   else if (A->rows <= 0 || A->columns <= 0 || A->matrix == NULL)
@@ -284,8 +287,6 @@ int danya_inverse_matrix(matrix_t *A, matrix_t *result) {
     status = CALCULATION_ERROR;
   else {
     double det;
-    matrix_t matrix_temp;
-    matrix_t matrix_temp2;
 
     danya_determinant(A, &det);
 
@@ -302,6 +303,9 @@ int danya_inverse_matrix(matrix_t *A, matrix_t *result) {
     else
       status = OK;
   }
+
+  danya_remove_matrix(&matrix_temp);
+  danya_remove_matrix(&matrix_temp2);
 
   return status;
 }
