@@ -12,12 +12,13 @@ all: danya_matrix.a
 
 danya_matrix.a:
 	gcc $(MAIN_FLAGS) -c danya_matrix.c -o $(OBJ_DIR)/danya_matrix.o
-	ar r $(LIB_DIR)/danya_matrix.a $(OBJ_DIR)/*.o
+	ar r danya_matrix.a $(OBJ_DIR)/*.o
 
 
 test: 
 	checkmk clean_mode=1 tests.check > tests.c
 	gcc $(MAIN_FLAGS) tests.c danya_matrix.c $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests
+	./tests/run_tests
 
 
 gcov_report:
@@ -28,6 +29,7 @@ gcov_report:
 
 
 clean:
+	rm -f danya_matrix.a
 	rm -f $(LIB_DIR)/*.a
 	rm -f $(OBJ_DIR)/*.o
 	rm -f $(TEST_DIR)/run_tests
@@ -38,4 +40,4 @@ clean:
 	rm -f $(GCOV_REPORT_DIR)/run_tests_gcov
 
 
-.PHONY: gcov_report
+.PHONY: all danya_matrix.a test clean gcov_report

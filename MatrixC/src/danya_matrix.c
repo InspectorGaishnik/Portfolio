@@ -292,11 +292,9 @@ int danya_inverse_matrix(matrix_t *A, matrix_t *result) {
 
     if (det == 0)
       status = 1;
-    else if (danya_create_matrix(A->rows, A->columns, result) != 0)
-      status = INCORRECT_MATRIX;
     else if (danya_calc_complements(A, &matrix_temp) != 0)
       status = INCORRECT_MATRIX;
-    else if (danya_transpose(&matrix_temp, &matrix_temp2))
+    else if (danya_transpose(&matrix_temp, &matrix_temp2) != 0)
       status = INCORRECT_MATRIX;
     else if (danya_mult_number(&matrix_temp2, 1.0 / det, result) != 0)
       status = INCORRECT_MATRIX;
