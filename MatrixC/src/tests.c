@@ -7,8 +7,9 @@
 
 #include "danya_matrix.h"
 
-// Tests with too large values:
 /*
+Tests with too large values:
+
 Incorrect_input_parameters_8
 Incorrect_input_parameters_danya_sum_matrix_3
 Incorrect_input_parameters_danya_sum_matrix_4
