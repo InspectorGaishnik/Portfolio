@@ -3,13 +3,13 @@
 
 #include <gtest/gtest.h>
 
-#include "../s21_matrix_oop.h"
+#include "../matrix_oop.h"
 
 // EqMatrix:
 
 TEST(EqMatrix, TEST_1) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -19,8 +19,8 @@ TEST(EqMatrix, TEST_1) {
 }
 
 TEST(EqMatrix, TEST_2) {
-  S21Matrix matrix1(2, 3);
-  S21Matrix matrix2(2, 3);
+  Matrix matrix1(2, 3);
+  Matrix matrix2(2, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -30,8 +30,8 @@ TEST(EqMatrix, TEST_2) {
 }
 
 TEST(EqMatrix, TEST_3) {
-  S21Matrix matrix1(1, 1);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(1, 1);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -41,8 +41,8 @@ TEST(EqMatrix, TEST_3) {
 }
 
 TEST(EqMatrix, TEST_4) {
-  S21Matrix matrix1(2, 3);
-  S21Matrix matrix2(2, 1);
+  Matrix matrix1(2, 3);
+  Matrix matrix2(2, 1);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -52,8 +52,8 @@ TEST(EqMatrix, TEST_4) {
 }
 
 TEST(EqMatrix, TEST_5) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -65,8 +65,8 @@ TEST(EqMatrix, TEST_5) {
 }
 
 TEST(EqMatrix, TEST_6) {
-  S21Matrix matrix1(3, 2);
-  S21Matrix matrix2(3, 2);
+  Matrix matrix1(3, 2);
+  Matrix matrix2(3, 2);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -78,8 +78,8 @@ TEST(EqMatrix, TEST_6) {
 }
 
 TEST(EqMatrix, TEST_7) {
-  S21Matrix matrix1(3, 2);
-  S21Matrix matrix2;
+  Matrix matrix1(3, 2);
+  Matrix matrix2;
   matrix1.InitializerMatrix();
 
   bool res = matrix1.EqMatrix(matrix2);
@@ -88,8 +88,8 @@ TEST(EqMatrix, TEST_7) {
 }
 
 TEST(EqMatrix, TEST_8) {
-  S21Matrix matrix1;
-  S21Matrix matrix2(3, 2);
+  Matrix matrix1;
+  Matrix matrix2(3, 2);
   matrix2.InitializerMatrix();
 
   bool res = matrix1.EqMatrix(matrix2);
@@ -98,8 +98,8 @@ TEST(EqMatrix, TEST_8) {
 }
 
 TEST(EqMatrix, TEST_9) {
-  S21Matrix matrix1;
-  S21Matrix matrix2;
+  Matrix matrix1;
+  Matrix matrix2;
 
   bool res = matrix1.EqMatrix(matrix2);
 
@@ -107,8 +107,8 @@ TEST(EqMatrix, TEST_9) {
 }
 
 TEST(EqMatrix, TEST_10) {
-  S21Matrix matrix1;
-  S21Matrix matrix2;
+  Matrix matrix1;
+  Matrix matrix2;
 
   bool res = matrix2.EqMatrix(matrix1);
 
@@ -118,8 +118,8 @@ TEST(EqMatrix, TEST_10) {
 // SumMatrix:
 
 TEST(SumMatrix, TEST_1) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -137,39 +137,39 @@ TEST(SumMatrix, TEST_1) {
 }
 
 TEST(SumMatrix, TEST_2) {
-  S21Matrix matrix1;
-  S21Matrix matrix2;
+  Matrix matrix1;
+  Matrix matrix2;
 
   EXPECT_THROW({ matrix1.SumMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SumMatrix, TEST_3) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2;
+  Matrix matrix1(3, 3);
+  Matrix matrix2;
   matrix1.InitializerMatrix();
 
   EXPECT_THROW({ matrix1.SumMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SumMatrix, TEST_4) {
-  S21Matrix matrix1;
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1;
+  Matrix matrix2(3, 3);
   matrix2.InitializerMatrix();
 
   EXPECT_THROW({ matrix1.SumMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SumMatrix, TEST_5) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2;
+  Matrix matrix1(3, 3);
+  Matrix matrix2;
   matrix1.InitializerMatrix();
 
   EXPECT_THROW({ matrix2.SumMatrix(matrix1); }, std::invalid_argument);
 }
 
 TEST(SumMatrix, TEST_6) {
-  S21Matrix matrix1;
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1;
+  Matrix matrix2(3, 3);
   matrix2.InitializerMatrix();
 
   EXPECT_THROW({ matrix2.SumMatrix(matrix1); }, std::invalid_argument);
@@ -178,8 +178,8 @@ TEST(SumMatrix, TEST_6) {
 // SubMatrix:
 
 TEST(SubMatrix, TEST_1) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -198,39 +198,39 @@ TEST(SubMatrix, TEST_1) {
 }
 
 TEST(SubMatrix, TEST_2) {
-  S21Matrix matrix1;
-  S21Matrix matrix2;
+  Matrix matrix1;
+  Matrix matrix2;
 
   EXPECT_THROW({ matrix1.SubMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SubMatrix, TEST_3) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2;
+  Matrix matrix1(3, 3);
+  Matrix matrix2;
   matrix1.InitializerMatrix();
 
   EXPECT_THROW({ matrix1.SubMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SubMatrix, TEST_4) {
-  S21Matrix matrix1;
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1;
+  Matrix matrix2(3, 3);
   matrix2.InitializerMatrix();
 
   EXPECT_THROW({ matrix1.SubMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(SubMatrix, TEST_5) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2;
+  Matrix matrix1(3, 3);
+  Matrix matrix2;
   matrix1.InitializerMatrix();
 
   EXPECT_THROW({ matrix2.SubMatrix(matrix1); }, std::invalid_argument);
 }
 
 TEST(SubMatrix, TEST_6) {
-  S21Matrix matrix1;
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1;
+  Matrix matrix2(3, 3);
   matrix2.InitializerMatrix();
 
   EXPECT_THROW({ matrix2.SubMatrix(matrix1); }, std::invalid_argument);
@@ -239,7 +239,7 @@ TEST(SubMatrix, TEST_6) {
 // MulNumber:
 
 TEST(MulNumber, TEST_1) {
-  S21Matrix matrix1(3, 3);
+  Matrix matrix1(3, 3);
   matrix1.InitializerMatrix();
 
   matrix1.MulNumber(2);
@@ -256,7 +256,7 @@ TEST(MulNumber, TEST_1) {
 }
 
 TEST(MulNumber, TEST_2) {
-  S21Matrix matrix1(3, 3);
+  Matrix matrix1(3, 3);
   matrix1.InitializerMatrix();
 
   matrix1.MulNumber(-2);
@@ -273,7 +273,7 @@ TEST(MulNumber, TEST_2) {
 }
 
 TEST(MulNumber, TEST_3) {
-  S21Matrix matrix1;
+  Matrix matrix1;
 
   EXPECT_THROW({ matrix1.MulNumber(-2); }, std::invalid_argument);
 }
@@ -281,8 +281,8 @@ TEST(MulNumber, TEST_3) {
 // MulMatrix:
 
 TEST(MulMatrix, TEST_1) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
   matrix1.InitializerMatrix();
   matrix2.InitializerMatrix();
 
@@ -300,22 +300,22 @@ TEST(MulMatrix, TEST_1) {
 }
 
 TEST(MulMatrix, TEST_2) {
-  S21Matrix matrix1(3, 2);
-  S21Matrix matrix2(3, 3);
+  Matrix matrix1(3, 2);
+  Matrix matrix2(3, 3);
 
   EXPECT_THROW({ matrix1.MulMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(MulMatrix, TEST_3) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(10, 3);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(10, 3);
 
   EXPECT_THROW({ matrix1.MulMatrix(matrix2); }, std::invalid_argument);
 }
 
 TEST(MulMatrix, TEST_4) {
-  S21Matrix matrix1(3, 3);
-  S21Matrix matrix2(3, 2);
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 2);
   matrix1.InitializerMatrix();
 
   matrix2.SetValue(0, 0, 1.0);
@@ -338,8 +338,8 @@ TEST(MulMatrix, TEST_4) {
 // Transpose:
 
 TEST(Transpose, TEST_1) {
-  S21Matrix matrix(3, 3);
-  S21Matrix matrixRes(3, 3);
+  Matrix matrix(3, 3);
+  Matrix matrixRes(3, 3);
   matrix.InitializerMatrix();
 
   matrixRes = matrix.Transpose();
@@ -358,7 +358,7 @@ TEST(Transpose, TEST_1) {
 // Determinant:
 
 TEST(Determinant, TEST_1) {
-  S21Matrix matrix(3, 3);
+  Matrix matrix(3, 3);
   matrix.InitializerMatrix2();
   double res;
 
@@ -368,7 +368,7 @@ TEST(Determinant, TEST_1) {
 }
 
 TEST(Determinant, TEST_2) {
-  S21Matrix matrix(1, 1);
+  Matrix matrix(1, 1);
   matrix.SetValue(0, 0, 9);
   double res;
 
@@ -378,7 +378,7 @@ TEST(Determinant, TEST_2) {
 }
 
 TEST(Determinant, TEST_3) {
-  S21Matrix matrix(2, 2);
+  Matrix matrix(2, 2);
   matrix.InitializerMatrix();
   double res;
 
@@ -388,7 +388,7 @@ TEST(Determinant, TEST_3) {
 }
 
 TEST(Determinant, TEST_4) {
-  S21Matrix matrix(1, 3);
+  Matrix matrix(1, 3);
 
   EXPECT_THROW({ matrix.Determinant(); }, std::invalid_argument);
 }
@@ -396,8 +396,8 @@ TEST(Determinant, TEST_4) {
 // CalcComplements:
 
 TEST(CalsComplements, TEST_1) {
-  S21Matrix matrix(3, 3);
-  S21Matrix matrixRes(3, 3);
+  Matrix matrix(3, 3);
+  Matrix matrixRes(3, 3);
   matrix.InitializerMatrix();
 
   matrixRes = matrix.CalcComplements();
@@ -414,8 +414,8 @@ TEST(CalsComplements, TEST_1) {
 }
 
 TEST(CalsComplements, TEST_2) {
-  S21Matrix matrix(3, 2);
-  S21Matrix matrixRes(3, 2);
+  Matrix matrix(3, 2);
+  Matrix matrixRes(3, 2);
   matrix.InitializerMatrix();
 
   EXPECT_THROW(
@@ -423,8 +423,8 @@ TEST(CalsComplements, TEST_2) {
 }
 
 TEST(CalsComplements, TEST_3) {
-  S21Matrix matrix(1, 1);
-  S21Matrix matrixRes(1, 1);
+  Matrix matrix(1, 1);
+  Matrix matrixRes(1, 1);
   matrix.SetValue(0, 0, 19);
 
   matrixRes = matrix.CalcComplements();
@@ -435,8 +435,8 @@ TEST(CalsComplements, TEST_3) {
 // InverseMatrix:
 
 TEST(InverseMatrix, TEST_1) {
-  S21Matrix matrix(3, 3);
-  S21Matrix matrixRes(3, 3);
+  Matrix matrix(3, 3);
+  Matrix matrixRes(3, 3);
   matrix.InitializerMatrix2();
 
   matrixRes = matrix.InverseMatrix();
@@ -451,7 +451,7 @@ TEST(InverseMatrix, TEST_1) {
   EXPECT_EQ(matrixRes.GetValue(2, 1), -29);
   EXPECT_EQ(matrixRes.GetValue(2, 2), 24);
 
-  S21Matrix test(3, 3);
+  Matrix test(3, 3);
   test.InitializerMatrix2();
   test.MulMatrix(matrixRes);
 
@@ -467,8 +467,8 @@ TEST(InverseMatrix, TEST_1) {
 }
 
 TEST(InverseMatrix, TEST_2) {
-  S21Matrix matrix(3, 3);
-  S21Matrix matrixRes(3, 3);
+  Matrix matrix(3, 3);
+  Matrix matrixRes(3, 3);
   matrix.InitializerMatrix();
 
   EXPECT_THROW({ matrixRes = matrix.InverseMatrix(); }, std::invalid_argument);
@@ -477,7 +477,7 @@ TEST(InverseMatrix, TEST_2) {
 // GetValue:
 
 TEST(GetValue, TEST_1) {
-  S21Matrix matrix(3, 3);
+  Matrix matrix(3, 3);
   matrix.InitializerMatrix();
 
   EXPECT_THROW({ matrix.GetValue(3, 3); }, std::out_of_range);
@@ -486,7 +486,7 @@ TEST(GetValue, TEST_1) {
 // SetValue:
 
 TEST(SetValue, TEST_1) {
-  S21Matrix matrix(3, 3);
+  Matrix matrix(3, 3);
   matrix.InitializerMatrix();
 
   EXPECT_THROW({ matrix.SetValue(3, 3, 19); }, std::out_of_range);
@@ -495,7 +495,7 @@ TEST(SetValue, TEST_1) {
 // InitializerMatrix:
 
 TEST(InitializerMatrix, TEST_2) {
-  S21Matrix matrix;
+  Matrix matrix;
 
   EXPECT_THROW({ matrix.InitializerMatrix(); }, std::invalid_argument);
 }
@@ -503,7 +503,7 @@ TEST(InitializerMatrix, TEST_2) {
 // InitializerMatrix2:
 
 TEST(InitializerMatrix2, TEST_2) {
-  S21Matrix matrix;
+  Matrix matrix;
 
   EXPECT_THROW({ matrix.InitializerMatrix2(); }, std::invalid_argument);
 }
@@ -511,7 +511,7 @@ TEST(InitializerMatrix2, TEST_2) {
 // InitializerMatrix3:
 
 TEST(InitializerMatrix3, TEST_2) {
-  S21Matrix matrix;
+  Matrix matrix;
 
   EXPECT_THROW({ matrix.InitializerMatrix3(); }, std::invalid_argument);
 }

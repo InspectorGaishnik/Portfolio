@@ -18,19 +18,19 @@ DIST_DIR 	  = my_project_matrix_cpp_1.0
 TEST_FILES    = $(TEST_DIR)/tests.cpp $(TEST_DIR)/tests_operators.cpp $(TEST_DIR)/tests_constructors.cpp
 
 
-all: s21_matrix_oop.a
+all: matrix_oop.a
 
 
-s21_matrix_oop.a: 
+matrix_oop.a: 
 	mkdir -p $(OBJ_DIR)
-	$(CC) $(MAIN_FLAGS) -c s21_matrix_oop.cpp -o $(OBJ_DIR)/s21_matrix_oop.o
-	ar r s21_matrix_oop.a $(OBJ_DIR)/*.o
+	$(CC) $(MAIN_FLAGS) -c matrix_oop.cpp -o $(OBJ_DIR)/matrix_oop.o
+	ar r matrix_oop.a $(OBJ_DIR)/*.o
 
 
 test: 
-	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests.cpp s21_matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests.out
-	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests_operators.cpp s21_matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests_operators.out
-	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests_constructors.cpp s21_matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests_constructors.out
+	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests.cpp matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests.out
+	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests_operators.cpp matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests_operators.out
+	$(CC) $(MAIN_FLAGS) $(TEST_DIR)/tests_constructors.cpp matrix_oop.cpp $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests_constructors.out
 	./$(TEST_DIR)/run_tests.out
 	./$(TEST_DIR)/run_tests_operators.out
 	./$(TEST_DIR)/run_tests_constructors.out
@@ -44,7 +44,7 @@ valgrind: test
 
 gcov_report: 
 	mkdir -p $(GCOV_DIR)
-	$(CC) $(MAIN_FLAGS) $(TEST_FILES) s21_matrix_oop.cpp $(GCOV_FLAGS) -o $(GCOV_DIR)/run_tests_gcov.out
+	$(CC) $(MAIN_FLAGS) $(TEST_FILES) matrix_oop.cpp $(GCOV_FLAGS) -o $(GCOV_DIR)/run_tests_gcov.out
 	./$(GCOV_DIR)/run_tests_gcov.out
 	gcovr -r . --html --html-details 			   \
 	--exclude '$(TEST_DIR)/tests.cpp' 			   \
@@ -78,7 +78,7 @@ clean:
 	rm -rf $(GCOV_DIR)
 	rm -f $(GCOV_DIR)/*.gcda
 	rm -f $(GCOV_DIR)/*.gcno
-	rm -f s21_matrix_oop.a
+	rm -f matrix_oop.a
 
 
-.PHONY: all s21_matrix_oop.a test valgrind gcov_report run clang_format clean
+.PHONY: all matrix_oop.a test valgrind gcov_report run clang_format clean

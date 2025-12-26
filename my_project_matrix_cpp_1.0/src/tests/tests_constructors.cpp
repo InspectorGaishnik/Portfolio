@@ -3,37 +3,37 @@
 
 #include <gtest/gtest.h>
 
-#include "../s21_matrix_oop.h"
+#include "../matrix_oop.h"
 
-// S21Matrix():
+// Matrix():
 
-TEST(S21Matrix_default, TEST_1) {
-  S21Matrix matrix;
+TEST(Matrix_default, TEST_1) {
+  Matrix matrix;
 
   EXPECT_EQ(matrix.GetRowsValue(), 0);
   EXPECT_EQ(matrix.GetColsValue(), 0);
 }
 
-// S21Matrix(int rows, int cols):
+// Matrix(int rows, int cols):
 
-TEST(S21Matrix_rows_cols, TEST_1) {
-  S21Matrix matrix(3, 3);
+TEST(Matrix_rows_cols, TEST_1) {
+  Matrix matrix(3, 3);
 
   EXPECT_EQ(matrix.GetRowsValue(), 3);
   EXPECT_EQ(matrix.GetColsValue(), 3);
 }
 
-TEST(S21Matrix_rows_cols, TEST_2) {
-  EXPECT_THROW({ S21Matrix matrix(-3, -3); }, std::invalid_argument);
+TEST(Matrix_rows_cols, TEST_2) {
+  EXPECT_THROW({ Matrix matrix(-3, -3); }, std::invalid_argument);
   ;
 }
 
-// S21Matrix(const S21Matrix& other):
+// Matrix(const Matrix& other):
 
-TEST(S21Matrix_COPY, TEST_1) {
-  S21Matrix matrix1(3, 3);
+TEST(Matrix_COPY, TEST_1) {
+  Matrix matrix1(3, 3);
   matrix1.InitializerMatrix();
-  S21Matrix matrix2(matrix1);
+  Matrix matrix2(matrix1);
 
   EXPECT_EQ(matrix2.GetValue(0, 0), 1);
   EXPECT_EQ(matrix2.GetValue(0, 1), 2);
@@ -46,12 +46,12 @@ TEST(S21Matrix_COPY, TEST_1) {
   EXPECT_EQ(matrix2.GetValue(2, 2), 9);
 }
 
-// S21Matrix(S21Matrix&& other):
+// Matrix(Matrix&& other):
 
-TEST(S21Matrix_transfer, TEST_1) {
-  S21Matrix matrix1(3, 3);
+TEST(Matrix_transfer, TEST_1) {
+  Matrix matrix1(3, 3);
   matrix1.InitializerMatrix();
-  S21Matrix matrix2(matrix1.Move());
+  Matrix matrix2(matrix1.Move());
 
   EXPECT_EQ(matrix2.GetValue(0, 0), 1);
   EXPECT_EQ(matrix2.GetValue(0, 1), 2);
