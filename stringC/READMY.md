@@ -1,4 +1,4 @@
-# string.h library
+# String.h library
 
 Статическая библиотека для работы со строками 
 
