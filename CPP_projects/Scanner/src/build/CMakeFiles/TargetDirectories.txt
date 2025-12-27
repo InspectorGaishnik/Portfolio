@@ -1,0 +1,4 @@
+/mnt/c/User_defined/GitHub/Portfolio/Scanner/src/build/CMakeFiles/MalwareScanner.dir
+/mnt/c/User_defined/GitHub/Portfolio/Scanner/src/build/CMakeFiles/ScannerCLI.dir
+/mnt/c/User_defined/GitHub/Portfolio/Scanner/src/build/CMakeFiles/edit_cache.dir
+/mnt/c/User_defined/GitHub/Portfolio/Scanner/src/build/CMakeFiles/rebuild_cache.dir

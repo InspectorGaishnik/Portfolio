@@ -1,0 +1,9 @@
+../directory/directory2/directory3/directory4/file14.txt;d88cf4ebda47388279a0a2c45442452c;My Doom
+../directory/directory2/directory3/directory4/directory5/file20.txt;c8d6a331d7e07e4e0b314e5fdad7b3c3;Trojan-Spy.Win32.Noon
+../directory/directory2/directory3/directory4/file15.txt;979d3ab6ac0c156ebfb33e9f4d62347c;Locky
+../directory/directory2/directory3/directory4/directory5/file18.txt;2d106d2d8f9f03b07cfca22628302f6c;SQL Slammer
+../directory/directory2/directory3/file11.txt;cb5415ba0348bb81d3749d02c8def6c9;Gator
+../directory/directory2/directory3/file12.txt;98dd15c330fb5abb4508347265a7f76c;Zeus
+../directory/directory2/file7.txt;22293e48c9872aa12165c18b6eadacce;CoolWebSearch
+../directory/file3.txt;424a38b21b4ecc0f8cf7f178012ed965;WannaCry
+../directory/file2.txt;50b01599ede4e93c16045f8b2abab5c3;Conficker

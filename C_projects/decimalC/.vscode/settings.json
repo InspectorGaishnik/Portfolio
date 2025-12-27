@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "danya_decimal.h": "c"
+    }
+}
