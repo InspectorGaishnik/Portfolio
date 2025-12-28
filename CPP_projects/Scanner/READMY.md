@@ -46,8 +46,8 @@ DLL, в которой расположена основная логика за
 ### Preliminary requirements
 
 - Compiler: C++ с поддержкой стандарта C++17 или новее.
-- Cmake: Версия 3.10 или новее.
-- Система сборки: make.
+- Система сборки: CMake Make.
+- CMake: Версия 3.10 или новее.
 
 ### installing 
 
@@ -55,7 +55,7 @@ DLL, в которой расположена основная логика за
 git clone "https://github.com/username/project-name.git".
 - Перейти в папку с склонированным проектом:  
 cd project-name/src/build/
-- Запустить Cmake и скомпилировать исполняемый файл:  
+- Запустить CMake и скомпилировать исполняемый файл:  
 cmake ..  
 make -> ScannerCLI
 
@@ -63,3 +63,9 @@ make -> ScannerCLI
 
 - ./ScannerCLI <scanned_directory> <hash_database> <log_file>
 
+### Testing
+
+- Перейти в папку с тестовыми файлами:  
+cd project-name/src/tests
+- Компиляция исполняемых файлов и их исполнение  
+make all
