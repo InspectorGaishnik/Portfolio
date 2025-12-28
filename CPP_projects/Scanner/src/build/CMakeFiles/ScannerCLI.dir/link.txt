@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ScannerCLI.dir/ScannerCLI.cpp.o -o ScannerCLI  -Wl,-rpath,/mnt/c/User_defined/GitHub/Portfolio/Scanner/src/build libMalwareScanner.so 

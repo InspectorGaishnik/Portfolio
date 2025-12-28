@@ -51,10 +51,25 @@ DLL, в которой расположена основная логика за
 
 ### installing 
 
-- Клонировать репозиторий:  
-git clone "https://github.com/username/project-name.git".
-- Перейти в папку с склонированным проектом:  
-cd project-name/src/build/
+#### Если необходимо клонировать только отдельный проект:
+- Создаем репозиторий (при его отсутствии):  
+mkdir project-folder && cd project-folder  
+git init
+- Включаем sparse checkout:  
+git config core.sparseCheckout true
+- Указываем нужную папку с проектом:  
+echo "CPP_projects/Scanner/" >> .git/info/sparse-checkout
+- Добавляем удаленный репозиторий:  
+git remote add origin git@github.com:InspectorGaishnik/Portfolio.git
+- Скачиваем только указанную папку:  
+git pull origin main
+
+
+#### Если необходимо клонировать весь репозиторий:
+- Клонируем репозиторий:  
+git clone "git@github.com:InspectorGaishnik/Portfolio.git".
+- Перейти в папку нужного проекта:  
+cd Portfolio/CPP_projects/Scanner/src/build/
 - Запустить CMake и скомпилировать исполняемый файл:  
 cmake ..  
 make -> ScannerCLI
