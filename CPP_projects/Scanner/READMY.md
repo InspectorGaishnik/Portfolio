@@ -43,13 +43,13 @@ DLL, в которой расположена основная логика за
 
 ## 📋 Usage
 
-### Preliminary requirements
+### ----- Preliminary requirements
 
 - Compiler: C++ с поддержкой стандарта C++17 или новее.
 - Система сборки: CMake Make.
 - CMake: Версия 3.10 или новее.
 
-### installing 
+### ----- installing 
 
 #### Если необходимо клонировать только отдельный проект:
 - Создаем репозиторий (при его отсутствии):  
@@ -74,13 +74,13 @@ cd Portfolio/CPP_projects/Scanner/src/build/
 cmake ..  
 make -> ScannerCLI
 
-### launch
+### ----- launch
 
-- ./ScannerCLI <scanned_directory> <hash_database> <log_file><br>
+- ./ScannerCLI <scanned_directory> <hash_database> <log_file>
 - Launch example:<br>
 ./ScannerCLI ../directory/ ../malicious_hashe.csv ../log.file
 
-### Testing
+### ----- Testing
 
 - Перейти в папку с тестовыми файлами:  
 cd project-name/src/tests
