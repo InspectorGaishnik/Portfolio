@@ -76,8 +76,8 @@ make -> ScannerCLI
 
 ### launch
 
-- ./ScannerCLI <scanned_directory> <hash_database> <log_file>
-- Example:<br>
+- ./ScannerCLI <scanned_directory> <hash_database> <log_file><br>
+- Launch example:<br>
 ./ScannerCLI ../directory/ ../malicious_hashe.csv ../log.file
 
 ### Testing
