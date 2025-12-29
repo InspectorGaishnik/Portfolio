@@ -74,5 +74,5 @@ gcc -Wall -Werror -Wextra main.cpp -o main.out matrix_oop.a -lstdc++
 
 - Перейти в папку с тестовыми файлами:  
 cd project-name/src/
-- Компиляция исполняемых файлов и их исполнение  
+- Компиляция исполняемых файлов и их исполнение:   
 make test
