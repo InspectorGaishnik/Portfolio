@@ -63,13 +63,17 @@ echo "CPP_projects/Scanner/" >> .git/info/sparse-checkout
 git remote add origin git@github.com:InspectorGaishnik/Portfolio.git
 - Скачиваем только указанную папку:  
 git pull origin main
-
+- Перейти в папку нужного проекта:  
+cd CPP_projects/Scanner/src/build/
+- Запустить CMake и скомпилировать исполняемый файл:  
+cmake ..  
+make -> ScannerCLI
 
 #### Если необходимо клонировать весь репозиторий:
 - Клонируем репозиторий:  
 git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 - Перейти в папку нужного проекта:  
-cd Portfolio/CPP_projects/Scanner/src/build/
+cd CPP_projects/Scanner/src/build/
 - Запустить CMake и скомпилировать исполняемый файл:  
 cmake ..  
 make -> ScannerCLI
