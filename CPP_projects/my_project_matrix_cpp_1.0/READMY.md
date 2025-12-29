@@ -55,9 +55,6 @@ git pull origin main
 cd CPP_projects/my_project_matrix_cpp_1.0/src/
 - Запустить Make, для компиляции статической библиотеки:  
 make -> matrix_oop.a
-- Для использования необходимо создать main.cpp, объявить в нем matrix_oop.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку:  
-Пример команды компиляции:  
-gcc -Wall -Werror -Wextra main.cpp -o main.out matrix_oop.a -lstdc++
 
 #### Если необходимо клонировать весь репозиторий:
 - Клонируем репозиторий:  
@@ -66,19 +63,16 @@ git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 cd CPP_projects/my_project_matrix_cpp_1.0/src/
 - Запустить Make, для компиляции статической библиотеки:  
 make -> matrix_oop.a
+
+### ----- launch
+
 - Для использования необходимо создать main.cpp, объявить в нем matrix_oop.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку:  
 Пример команды компиляции:  
 gcc -Wall -Werror -Wextra main.cpp -o main.out matrix_oop.a -lstdc++
 
-### ----- launch
-
-- ./ScannerCLI <scanned_directory> <hash_database> <log_file>
-- Launch example:<br>
-./ScannerCLI ../directory/ ../malicious_hashe.csv ../log.file
-
 ### ----- Testing
 
 - Перейти в папку с тестовыми файлами:  
-cd project-name/src/tests
+cd project-name/src/
 - Компиляция исполняемых файлов и их исполнение  
-make all
+make test
