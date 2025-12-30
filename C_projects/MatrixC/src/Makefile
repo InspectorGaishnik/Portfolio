@@ -16,14 +16,14 @@ danya_matrix.a:
 
 
 test: 
-	mkdir $(TEST_DIR)
+	mkdir -p $(TEST_DIR)
 	checkmk clean_mode=1 tests.check > $(TEST_DIR)/tests.c
 	gcc $(MAIN_FLAGS) $(TEST_DIR)/tests.c danya_matrix.c $(TESTS_FLAGS) -o $(TEST_DIR)/run_tests
 	./$(TEST_DIR)/run_tests
 
 
-gcov_report: clean test
-	mkdir $(GCOV_REPORT_DIR)
+gcov_report: test
+	mkdir -p $(GCOV_REPORT_DIR)
 	gcc $(MAIN_FLAGS) $(TEST_DIR)/tests.c danya_matrix.c $(GCOV_REPORT_FLAGS) -o $(GCOV_REPORT_DIR)/run_tests_gcov
 	$(GCOV_REPORT_DIR)/./run_tests_gcov
 	gcovr -r . --html --html-details \
