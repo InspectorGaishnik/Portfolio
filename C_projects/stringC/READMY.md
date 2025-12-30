@@ -55,7 +55,7 @@ make -> danya_string.a
 
 #### Если необходимо клонировать весь репозиторий:
 - Клонируем репозиторий:  
-git clone "git@github.com:InspectorGaishnik/Portfolio.git".
+git clone git@github.com:InspectorGaishnik/Portfolio.git
 - Перейти в папку нужного проекта:  
 cd Portfolio/C_projects/stringC/src/
 - Запустить Make, для компиляции статической библиотеки:  
@@ -63,9 +63,9 @@ make -> danya_string.a
 
 ### ----- launch
 
-- Для использования необходимо создать main.c, объявить в нем danya_matrix.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку danya_string.a:  
+- Для использования необходимо создать main.c, объявить в нем danya_string.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку danya_string.a и -lm:  
 Пример команды компиляции:  
-gcc -Wall -Werror -Wextra main.c -o main.out danya_string.a 
+gcc -Wall -Werror -Wextra main.c -o main.out danya_string.a -lm
 
 ### ----- Testing
 

@@ -52,7 +52,7 @@ make -> danya_matrix.a
 
 #### Если необходимо клонировать весь репозиторий:
 - Клонируем репозиторий:  
-git clone "git@github.com:InspectorGaishnik/Portfolio.git".
+git clone git@github.com:InspectorGaishnik/Portfolio.git
 - Перейти в папку нужного проекта:  
 cd Portfolio/C_projects/MatrixC/src/
 - Запустить Make, для компиляции статической библиотеки:  

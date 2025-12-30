@@ -57,7 +57,7 @@ make -> danya_decimal.a
 - Клонируем репозиторий:  
 git clone git@github.com:InspectorGaishnik/Portfolio.git
 - Перейти в папку нужного проекта:  
-cd C_projects/decimalC/src/
+cd Portfolio/C_projects/decimalC/src/
 - Запустить Make, для компиляции статической библиотеки:  
 make -> danya_decimal.a
 
