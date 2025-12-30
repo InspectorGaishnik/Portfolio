@@ -28,7 +28,7 @@ Version - 1.0.0.
 
 ### ----- Preliminary requirements
 
-- Compiler: C++ с поддержкой стандарта C++20 или новее.
+- Compiler: gcc с поддержкой стандарта C_11 или новее.
 - Система сборки: Make.
 
 ### ----- installing 

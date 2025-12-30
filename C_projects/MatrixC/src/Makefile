@@ -1,6 +1,6 @@
-MAIN_FLAGS = -Wall -Werror -Wextra
-TESTS_FLAGS = -lcheck -lm -lsubunit
-GCOV_REPORT_FLAGS = -lcheck -lm -lsubunit -fprofile-arcs -ftest-coverage
+MAIN_FLAGS = -Wall -Werror -Wextra -std=c11
+TESTS_FLAGS = -lcheck -lm -lsubunit -std=c11
+GCOV_REPORT_FLAGS = -lcheck -lm -lsubunit -fprofile-arcs -ftest-coverage -std=c11
 OBJ_DIR = objectFiles
 TEST_DIR = tests
 GCOV_REPORT_DIR = gcov_report
@@ -10,7 +10,7 @@ all: danya_matrix.a
 
 
 danya_matrix.a:
-	mkdir $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)
 	gcc $(MAIN_FLAGS) -c danya_matrix.c -o $(OBJ_DIR)/danya_matrix.o
 	ar r danya_matrix.a $(OBJ_DIR)/*.o
 

@@ -1,9 +1,9 @@
 OBJ_DIR = objectFiles
 TESTS_DIR = tests
 GCOV_REPORT_DIR = gcov_report
-MAIN_FLAGS = -Wall -Werror -Wextra
-TESTS_FLAGS = -lcheck -lm -lsubunit
-GCOV_REPORT_FLAGS = -lcheck -lm -lsubunit -fprofile-arcs -ftest-coverage
+MAIN_FLAGS = -Wall -Werror -Wextra -std=c11
+TESTS_FLAGS = -lcheck -lm -lsubunit -std=c11
+GCOV_REPORT_FLAGS = -lcheck -lm -lsubunit -fprofile-arcs -ftest-coverage -std=c11
 
 
 all: danya_decimal.a
