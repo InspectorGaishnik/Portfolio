@@ -73,7 +73,7 @@ make -> ScannerCLI
 - Клонируем репозиторий:  
 git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 - Перейти в папку нужного проекта:  
-cd CPP_projects/Scanner/src/build/
+cd Portfolio/CPP_projects/Scanner/src/build/
 - Запустить CMake и скомпилировать исполняемый файл:  
 cmake ..  
 make -> ScannerCLI

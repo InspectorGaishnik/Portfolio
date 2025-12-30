@@ -48,7 +48,7 @@ cd CPP_projects/ContainersCPP/src/
 - Клонируем репозиторий:  
 git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 - Перейти в папку нужного проекта:  
-cd CPP_projects/ContainersCPP/src/
+cd Portfolio/CPP_projects/ContainersCPP/src/
 
 ### ----- launch
 

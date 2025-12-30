@@ -60,7 +60,7 @@ make -> matrix_oop.a
 - Клонируем репозиторий:  
 git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 - Перейти в папку нужного проекта:  
-cd CPP_projects/my_project_matrix_cpp_1.0/src/
+cd Portfolio/CPP_projects/my_project_matrix_cpp_1.0/src/
 - Запустить Make, для компиляции статической библиотеки:  
 make -> matrix_oop.a
 
