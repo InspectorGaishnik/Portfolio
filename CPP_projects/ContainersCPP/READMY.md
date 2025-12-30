@@ -58,7 +58,7 @@ gcc -Wall -Werror -Wextra main.cpp -o main.out -lstdc++
 
 ### ----- Testing
 
-- Перейти в папку директорию src:  
-cd project-name/src/
+- Перейти в директорию src:  
+cd project-folder/CPP_projects/ContainersCPP/src/
 - Компиляция исполняемых файлов и их исполнение:   
 make all

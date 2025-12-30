@@ -87,6 +87,6 @@ make -> ScannerCLI
 ### ----- Testing
 
 - Перейти в папку с тестовыми файлами:  
-cd project-name/src/tests
+cd project-folder/CPP_projects/Scanner/src/tests
 - Компиляция исполняемых файлов и их исполнение:  
 make all
