@@ -1,4 +1,4 @@
-#include "danya_matrix.h"
+#include "../danya_matrix.h"
 
 /*
 Tests with too large values:
