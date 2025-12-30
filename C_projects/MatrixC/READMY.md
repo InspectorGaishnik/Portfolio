@@ -54,13 +54,13 @@ make -> danya_matrix.a
 - Клонируем репозиторий:  
 git clone "git@github.com:InspectorGaishnik/Portfolio.git".
 - Перейти в папку нужного проекта:  
-cd C_projects/MatrixC/src/
+cd Portfolio/C_projects/MatrixC/src/
 - Запустить Make, для компиляции статической библиотеки:  
 make -> danya_matrix.a
 
 ### ----- launch
 
-- Для использования необходимо создать main.c, объявить в нем danya_matrix.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку:  
+- Для использования необходимо создать main.c, объявить в нем danya_matrix.h как заголовочный файл и при компиляции исполняемого файла, подключать библиотеку danya_matrix.a:  
 Пример команды компиляции:  
 gcc -Wall -Werror -Wextra main.c -o main.out danya_matrix.a 
 
