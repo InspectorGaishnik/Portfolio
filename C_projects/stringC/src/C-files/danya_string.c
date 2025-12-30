@@ -1,4 +1,4 @@
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 void *danya_memchr(const void *str, int c, danya_size_t n) {
   unsigned char *ptr = (unsigned char *)str;

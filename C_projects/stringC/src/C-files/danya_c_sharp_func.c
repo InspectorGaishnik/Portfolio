@@ -1,4 +1,4 @@
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 void *danya_to_upper(const char *str) {
   char *danya_upper_str = danya_NULL;

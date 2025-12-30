@@ -1,6 +1,4 @@
-#include "danya_string.h"
-
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 int danya_sprintf(char *str, const char *format, ...) {
   flags flag_list = {0};

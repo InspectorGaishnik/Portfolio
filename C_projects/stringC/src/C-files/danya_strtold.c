@@ -1,4 +1,4 @@
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 static int danya_ScienceNotationFinder(const char *buffer);
 static long double danya_atof(const char *buffer);

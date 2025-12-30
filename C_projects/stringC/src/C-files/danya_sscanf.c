@@ -1,4 +1,4 @@
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 int danya_sscanf(const char *str, const char *fstr, ...) {
   int eof_fl = danya_CheckStringEOF(str);

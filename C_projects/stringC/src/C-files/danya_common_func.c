@@ -1,4 +1,4 @@
-#include "danya_string.h"
+#include "../H-files/danya_string.h"
 
 int danya_atoi(const char *str) {
   int res = 0, sign = 1, overflow = 0;

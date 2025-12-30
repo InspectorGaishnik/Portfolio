@@ -25,7 +25,7 @@ test:
 gcov_report: test
 	mkdir -p $(GCOV_REPORT_DIR)
 	gcc $(MAIN_FLAGS) $(TEST_DIR)/tests.c danya_matrix.c $(GCOV_REPORT_FLAGS) -o $(GCOV_REPORT_DIR)/run_tests_gcov
-	$(GCOV_REPORT_DIR)/./run_tests_gcov
+	./$(GCOV_REPORT_DIR)/run_tests_gcov
 	gcovr -r . --html --html-details \
 	--exclude '$(TEST_DIR)/tests.c' \
 	-o $(GCOV_REPORT_DIR)/coverage_report.html
